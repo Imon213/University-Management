@@ -41,26 +41,42 @@ a{
 .main-content>.right-main{
     flex: 2;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+   
+   
     border-left: 1px solid lightgray;
     margin: 5px;
 }
-.main-content>.right-main>input{
-    width: 250px;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid lightgray;
+table{
+    margin: 50px;
+    border: solid silver 1px;
 }
-#add_stu{
-    width: 250px;
-    height: 30px;
-    background-color: aquamarine;
+th{
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 10px;
+    background:skyblue;
+    color: gray;
+  
+}
+tr:nth-child(even)
+{
+    background:  whitesmoke;
     
 }
-#add_stu:hover{
-    cursor: pointer;
+td{
+    
+    font-family: sans-serif;
+   
+    text-align: center;
+   
+    
+}
+tr:nth-child(odd){
+    
+    background: wheat;
+    
+}
+td:hover
+{
+    background:yellowgreen;
 }

@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<?php
+session_start();
+require('../../../Model/db.php');
+$conn=getConnection();
+$sql="select * from user where type='teacher'";
+$result= mysqli_query($conn, $sql);
+// if(isset($_SESSION['flag']))
+{
+?>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/University-Management/Resources/css/Admin/Dashboard.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="/University-Management/Resources/css/Admin/studentList.css">
+    <title>Student List</title>
 </head>
-
 <body>
-    <div class="container">
+<div class="container">
         <!-- top-nav started -->
         <div class="top-nav">
             <div class="left">
@@ -36,11 +43,41 @@
                 </ul>
             </div>
             <div class="right-main">
-                <h3>Hello Admin. Hope so you will have a good time with us..</h3>
+            <center>
+           <table>
+               <tr>
+               <th width="100px">ID</th>
+                   <th width="200px">Name</th>
+                   <th width="200px">Email</th>
+                   <th width="200px">Phone</th>
+                   <th width="200px">Type</th>
+                   <th>Action</th>
+              </tr>
+    <?php while($row=mysqli_fetch_array($result)){?>
+    <tr>
+    
+    <td><?php echo $row['id'];?></td>
+        <td><?php echo $row['name'];?></td>
+        <td><?php echo $row['email'];?></td>
+        <td><?php echo $row['phone'];?></td>
+        <td><?php echo $row['type'];?></td>
+        <td width="200px">DELETE</td>
+   
+</tr>
+    <?php } ?>
+       
+          </table>
+          </center>
             </div>
         </div>
         <!-- main-content ended -->
     </div>
 </body>
-
 </html>
+<?php
+}
+{
+ // header('location:login.php');
+}
+
+?>

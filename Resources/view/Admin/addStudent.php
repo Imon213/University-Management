@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/University-Management/Resources/css/Admin/addStudent.css">
     <title>Add Student</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="/University-Management/Resources/js/Admin/addStudent.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +18,7 @@
             </div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
+                <li><a href="/University-Management/Resources/view/Admin/Dashboard.php">Home</a> </li>
                     <li>Logout</li>
                 </ul>
             </div>
@@ -26,10 +28,10 @@
          <div class="main-content">
             <div class="left-main">
                 <ul>
-                    <li><a href="#">ADD FACULTY</a> </li>
-                    <li><a href="#">ADD STUDENT</a> </li>
-                    <li><a href="#">FACULTY LIST</a> </li>
-                    <li><a href="#">STUDENT LIST</a> </li>
+                <li><a href="/University-Management/Resources/view/Admin/addStudent.php">ADD STUDENT</a> </li>
+                    <li><a href="/University-Management/Resources/view/Admin/addFaculty.php">ADD FACULTY</a> </li>
+                    <li><a href="/University-Management/Resources/view/Admin/studentList.php">STUDENT LIST</a> </li>
+                    <li><a href="/University-Management/Resources/view/Admin/facultyList.php">FACULTY LIST</a> </li>
                     <li><a href="#">STUDENT RESISTRATION</a> </li>
                 </ul>
             </div>
