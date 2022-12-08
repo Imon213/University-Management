@@ -1,0 +1,39 @@
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: blue;
+    color: white;
+}
+.top-nav>.right>ul{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+
+}
+.main-content{
+    display: grid;
+    height: 90vh;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr)
+   
+}
+.main-content> a>.card{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.main-content>a>.card>h3{
+    text-align: center;
+}
+.main-content> a>.card:hover{
+    background-color: blue;
+    color: white;
+}

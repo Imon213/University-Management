@@ -61,7 +61,7 @@ $result= mysqli_query($conn, $sql);
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['phone'];?></td>
         <td><?php echo $row['type'];?></td>
-        <td width="200px">DELETE</td>
+        <td width="200px"><a href="../../../Controller/Admin/deleteFaculty.php?id=<?php echo $row['id'];?>">DELETE</a></td>
    
 </tr>
     <?php } ?>

@@ -2,6 +2,7 @@ $(document).ready(function() {
     $(document).on('click', '#add_stu', function() {
      let sname = $('#fname').val();
      let address = $('#address').val();
+     
      let email = $('#email').val();
      let phone = $('#phone').val();
      let password = $('#password').val();
